@@ -94,7 +94,7 @@ string createCreationBox(Creation recipe, int canCreate) {
     } else if (!recipe.found && canCreate > 0) {
         border += 'solid #4b4';
     } else if (!recipe.found && canCreate < 0) {
-        border += 'dashed #b44';
+        border += 'dashed #b4b';
     }
     string altText = "";
     if (canCreate > 0) {
@@ -142,13 +142,13 @@ string createCreationBox(Creation recipe, int canCreate) {
 }
 
 int checkSupplies(Creation recipe, int [string] resources) {
-    int [String] dailyAllowance = {
-        "spice": 3, 
-        "rum": 3, 
-        "anchor": 3, 
-        "mast": 3, 
-        "silk": 1, 
-        "gold": 1
+    float [String] dailyAllowance = {
+        "spice": 3.0, 
+        "rum": 3.0, 
+        "anchor": 3.0, 
+        "mast": 3.0, 
+        "silk": 1.0, 
+        "gold": 1.0
     };
     int result = 0;
     int minRes = -100;
@@ -160,9 +160,9 @@ int checkSupplies(Creation recipe, int [string] resources) {
                 maxRes = min(floor(amount/recipe.resources[resource]), maxRes);
             } else {
                 int deficiency = recipe.resources[resource]-amount;
-                float daysToFill = deficiency / dailyAllowance[resource];
-                int wholeDays = ceil(deficiency);
-                minRes = max(-1*wholeDays, minRes);
+                float daysToFill = (deficiency / dailyAllowance[resource]);
+                int wholeDays = ceil(daysToFill);
+                minRes = max(wholeDays, minRes);
                 canMake = false;
             }
         }
@@ -170,7 +170,7 @@ int checkSupplies(Creation recipe, int [string] resources) {
     if (canMake) {
         result = maxRes;
     } else {
-        result = minRes;
+        result = -1*minRes;
     }
 //    print(recipe.name + ": " + to_string(result));
     return result; 
@@ -193,7 +193,7 @@ string renderPage(string oldPage, Creation[int] recipes) {
         int availability = checkSupplies(recipe, resources);
         newPage += createCreationBox(recipes[ix], availability);
     }
-    return oldParts[0] + divider + "<br><br>" + newPage + campLink + oldParts[1];
+    return oldParts[0] + divider + "<br><br><center>" + newPage + campLink + oldParts[1];
 }
 
 string handleTakerSpace(string origPage) {
