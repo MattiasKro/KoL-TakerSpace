@@ -11,7 +11,8 @@ Run the following in the Graphical CLI in KolMafia
 Relay script for KoLmafia, for the web game Kingdom of Loathing. 
 
 Shows all the things you can create in the TakerSpace, and how many. Or how many days there are left before you can create them.
-If an item has a dashed border, you are currently unable to create it. Stuf you haven't discovered yet are marked with a dark green border.
+If an item has a dashed border, you are currently unable to create it. Stuf you haven't discovered yet are marked with a dark green border if you have the resources, and a dark purple border if you don't have enough resources.
 
 ## Example:
-![bild](https://github.com/user-attachments/assets/38a1dc44-95d6-4f4a-b119-50d615391288)
+![bild](https://github.com/user-attachments/assets/23d6847c-0cd4-41c1-9591-1e97664b6ed0)
+
