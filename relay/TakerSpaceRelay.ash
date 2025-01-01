@@ -85,7 +85,7 @@ Creation[int] getCreations() {
         {"12", "jolly roger tattoo kit", "Tattoo!", "ts_tatkit", "0 6 1 1 0 6"},
         {"13", "golden pet rock", "Familiar hatchling.", "ts_goldrock", "0 0 0 0 0 7"},
         {"14", "groggles", "+50% Booze drop accessory.", "ts_goggles", "0 6 0 0 0 0"},
-        {"15", "pirate dinghy", "Quest Item. Access to the Island.<br>One free +1000HP/+1000MP heal per day.", "ts_dinghy", "0 0 1 1 1 0"},
+        {"15", "pirate dinghy", "<i>Quest Item</i>. Access to the Island.<br>One free +1000HP/+1000MP heal per day.", "ts_dinghy", "0 0 1 1 1 0"},
         {"16", "anchor bomb", "Combat item. 30 turn banish.", "ts_bomb", "0 1 3 1 0 1"},
         {"17", "silky pirate drawers", "Pants. +50% init, -5% combat", "ts_pants", "0 0 0 0 2 0"},
         {"18", "spices", "Good old spices. Nothing beats spices.", "spice", "1 0 0 0 0 0"}
