@@ -14,5 +14,5 @@ Shows all the things you can create in the TakerSpace, and how many. Or how many
 If an item has a dashed border, you are currently unable to create it. Stuf you haven't discovered yet are marked with a dark green border if you have the resources, and a dark purple border if you don't have enough resources.
 
 ## Example:
-![bild](https://github.com/user-attachments/assets/23d6847c-0cd4-41c1-9591-1e97664b6ed0)
+![bild](https://github.com/user-attachments/assets/f766fa6f-cb43-4a08-8145-b23060d8c355)
 
