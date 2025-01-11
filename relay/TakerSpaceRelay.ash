@@ -27,8 +27,9 @@ int num_items(string name)
 		return 0;
 	}
 
-	int amt = item_amount(i) + closet_amount(i) + equipped_amount(i) + storage_amount(i);
-	amt += display_amount(i) + shop_amount(i);
+	int amt = item_amount(i) + closet_amount(i) + equipped_amount(i);
+// We could add items not available right now, but no
+//	amt += + storage_amount(i) + display_amount(i) + shop_amount(i);
 
 	//Make a check for familiar equipment NOT equipped on the current familiar.
 	foreach fam in $familiars[] {
